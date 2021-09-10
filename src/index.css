@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +7,104 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #0dcaf0;
+  background: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/447850/6a21d0150328351028a4c27d083221453d76c5a4.jpg');
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/*Header*/
+.header{
+  border: 1px solid #0dcaf0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111;
+  border: 1px solid #fff;
+}
+
+/*Navbar*/
+.headerIcons{
+  margin-right: 10px;
+  width: 250px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul{
+  width: 250px;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon{
+  border: 1px solid #0dcaf0;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.icon i{
+  margin-top: 13px;
+  font-size: 25px;
+  color: #0dcaf0;
+}
+
+.icon:hover{
+  background-color: #0dcaf0;
+}
+.icon i:hover{
+  color: #000;
+}
+
+.icon i,
+.icon img{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+/*Books page*/
+/* .profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+
+.profilePic{
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  border-radius: 100%;
+  border: 1px solid #0dcaf0;
+}
+
+/*BookCard hover*/
+.hover{
+  transition: all .2s ease-in-out;
+}
+.hover:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.notFound{
+  font-family: 'Akaya Telivigala', cursive;
 }
