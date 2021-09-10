@@ -29,7 +29,7 @@ function App(props) {
       <Route path="/book/:id" render={(props) => <BookDetails {...props} books={books} />} />
       <Route component={NotFound} />
     </Switch>
-  );}
-//}
+  );
+}
 
 export default connect(mapStateToProps)(App);
