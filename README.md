@@ -1,3 +1,22 @@
+# Bookshelf - React App
+
+A Bookshelf App where a user can sort his favourite books into 3 shelfs:
+- Want to read
+- Read
+- Currently Reading
+
+A user can also explore books by Genre, or they can search for a book title, book author, or book series name
+
+The idea was inspired by Goodreads app, where you can do this and more
+
+### What's next
+
+Things that are on the works:
+- Add Google Books API 
+- Use Redux toolkit
+- Add more features in the Profile Page
+- Add people's reviews and rates
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
