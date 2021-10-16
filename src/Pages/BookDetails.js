@@ -33,22 +33,23 @@ const BookDetails = (props) => {
     return(
         <>
         <Header />
-        <div className="container d-flex flex-column align-items-center p-4" style={{border: '1px solid #fff'}}>
-        <button type="button" className="btn btn-outline-info mt-2 align-self-start" onClick={() => history.goBack()}>Back</button>
-            <img src={book.cover} alt="book cover" className="w-25 m-2" />
+        <div className="container d-flex flex-column align-items-center p-4 mt-4 content-box">
+        <button type="button" className="btn btn-outline-info mt-2 align-self-start form-button" onClick={() => history.goBack()}>Back</button>
+            {/* <div className='overlay'></div> */}
+            <img src={book.cover} alt="book cover" className="w-25 m-2 " />
             <h1 className="m-2">{book.title}</h1>
             {book.series && <p className="m-2">{book.series}</p>}
             <h2 className="m-2">{book.author}</h2>
             <p className="m-2">{book.rate}</p>
             <div className="my-3" style={{cursor: 'pointer'}}>
-                <select className='form-select' aria-label='Default select example' value={book.shelfNo} onChange={e => handleShelf(e.target.value)}>
+                <select className='form-select' aria-label='Default select example' value={book.shelfNo} onChange={e => handleShelf(e.target.value)} style={{backgroundColor: '#111', color: '#0dcaf0'}}>
                     <option value={2} >Want to Read</option>
                     <option value={1} >Currently Reading</option>
                     <option value={3} >Read</option>
                     <option value={0} >None</option>
                 </select>
             </div>
-            <div className='container m-2 p-3 w-50' style={{border: '1px solid #fff'}}>
+            <div className='container m-2 p-3 w-50' style={{border: '1px solid #fff', color: '#0dcaf0'}}>
                 {book.description}
             </div>
         </div>

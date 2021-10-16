@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
+:root{
+  --darkWave: #02333c;
+  --lightWave: #99bcc4;
+  --wave: #08535d;
+  --shadow:  rgba(0, 0, 0, 0.5);
+  --negShadow: rgba(255, 255, 255, .05);
+}
 
 body {
   margin: 0;
@@ -7,9 +16,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #0dcaf0;
+  /* color: #0dcaf0;
   background: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/447850/6a21d0150328351028a4c27d083221453d76c5a4.jpg');
-  background-size: cover;
+  background-size: cover; */
+  background-color: var(--darkWave) !important; 
+  color: #fff;
 }
 
 code {
@@ -17,20 +28,81 @@ code {
     monospace;
 }
 
+h1,
+h2,
+h4,
+h6,
+p{
+  /* color: #0dcaf0; */
+  color: #fff;
+}
+
+/*Scroll bar*/
+::-webkit-scrollbar{
+  width: 10px;
+}
+/*Track*/
+::-webkit-scrollbar-track{
+  background: var(--darkWave);
+  box-shadow: inset 2px 2px 5px var(--shadow),
+            inset -3px -3px 7px var(--negShadow);
+
+}
+/*Handle*/
+::-webkit-scrollbar-thumb{
+  background: var(--wave);
+}
+/*Handle on hover*/
+::-webkit-scrollbar-thumb:hover{
+  background: var(--lightWave);
+}
+
+/*Logo*/
+.logo{
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 65px;
+  font-weight: 700;
+}
+
+/*Forms*/
+.form{
+  box-shadow: 2px 2px 5px var(--shadow),
+            -3px -3px 7px var(--negShadow);
+  padding: 1rem;
+}
+
+.form-input{
+  border: none !important; 
+  outline: none !important;
+  background: none !important;
+  color: var(--lightWave) !important;
+  margin-bottom: 10px;
+  box-shadow: inset 2px 2px 5px var(--shadow),
+            inset -3px -3px 7px var(--negShadow);
+}
+
+.form-button{
+  background: transparent !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+.form-button:hover{
+  background: #fff !important;
+  color: var(--darkWave) !important;
+}
+
 /*Header*/
 .header{
-  border: 1px solid #0dcaf0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #111;
-  border: 1px solid #fff;
 }
 
 /*Navbar*/
 .headerIcons{
   margin-right: 10px;
-  width: 250px;
+  width: 300px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -43,7 +115,7 @@ code {
 }
 
 .navbar ul{
-  width: 250px;
+  width: 300px;
   padding-left: 0;
   list-style: none;
   display: flex;
@@ -52,24 +124,32 @@ code {
 }
 
 .icon{
-  border: 1px solid #0dcaf0;
-  border-radius: 100%;
+  border-radius: 100%; 
   width: 50px;
   height: 50px;
   cursor: pointer;
+  transition: all .3s ease-in-out;
 }
 
 .icon i{
-  margin-top: 13px;
+  margin-top: 10px;
   font-size: 25px;
-  color: #0dcaf0;
+  color: #fff;
+  transition: all .3s ease-in-out;
 }
 
 .icon:hover{
-  background-color: #0dcaf0;
+  background-color: #fff;
+  border: 3px solid #fff;
 }
 .icon i:hover{
-  color: #000;
+  color: var(--darkWave);
+}
+
+.active-icon{
+  background-color: #fff;
+  border: 3px solid #fff;
+  color: var(--darkWave);
 }
 
 .icon i,
@@ -89,20 +169,47 @@ code {
 } */
 
 .profilePic{
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   margin: 10px;
   border-radius: 100%;
-  border: 1px solid #0dcaf0;
+  border: 3px solid #fff;
+}
+
+.content-box{ 
+  background: var(--darkWave);
+  box-shadow: inset 2px 2px 5px var(--shadow),
+            inset -3px -3px 7px var(--negShadow);
 }
 
 /*BookCard hover*/
 .hover{
+  box-shadow: 2px 2px 5px var(--shadow),
+            -3px -3px 7px var(--negShadow);
   transition: all .2s ease-in-out;
 }
 .hover:hover{
   cursor: pointer;
   transform: scale(1.1);
+  background: var(--darkWave);
+}
+
+.search-result{
+  background: var(--darkWave);
+}
+
+.search-result:hover{
+  background: var(--lightWave);
+  color: #000;
+}
+
+.overlay{
+  width: 200px;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, rgba(2,0,36,.5) 0%, rgba(0,0,0,.5) 2%, rgba(255,255,255,.5) 3%, rgba(247,254,255,.5) 5%, rgba(0,0,0,.5) 7%, rgba(255,255,255,.5) 13%, rgba(255,255,255,.2) 100%);
 }
 
 .notFound{

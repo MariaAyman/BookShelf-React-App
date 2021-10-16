@@ -8,13 +8,13 @@ function Browse(props){
         <>
         <Header />
         <div className="container" >
-            <div className="container my-4 p-4" style={{border: "1px solid #fff", background: "#111"}}>
+            <div className="container my-4 p-4 content-box">
                 <h4>Explore Books</h4>
                 <div>
                     <Search books={props.books}/>
                 </div>
             </div>
-            <div className="container my-4 p-4" style={{border: "1px solid #fff", background: '#111'}}>
+            <div className="container my-4 p-4 content-box">
                 <h4>Explore by Genre:</h4>
                 <div className='container my-4'>
                     <h6>Fantasy</h6>

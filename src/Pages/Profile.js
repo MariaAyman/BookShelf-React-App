@@ -1,14 +1,17 @@
 import Header from '../Components/Header'
+import { useAuth } from '../contexts/AuthContext'
 
 const Profile = () => {
+    const { currentUser } = useAuth()
+    
     return(
         <>
         <Header />
         <div className="d-flex flex-column align-items-center justify-content-center">
-            <img className="profilePic" src="profile.png" alt=""/>
-            <h1>Maria Ayman</h1>
+            <img className="profilePic" src={currentUser.photoURL} alt=""/>
+            <h1>{currentUser.displayName}</h1>
         </div>
-        <div className="container p-4 my-4" style={{border: "1px solid #fff", background: '#111'}}>
+        <div className="container p-4 my-4 content-box">
             <h4>Bio</h4>
             <div style={{textAlign: "center"}}>
                 <p><i>"Never let them tell you you're not magic"</i></p>
