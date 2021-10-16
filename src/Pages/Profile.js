@@ -8,8 +8,8 @@ const Profile = () => {
         <>
         <Header />
         <div className="d-flex flex-column align-items-center justify-content-center">
-            <img className="profilePic" src={currentUser.photoURL} alt=""/>
-            <h1>{currentUser.displayName}</h1>
+            {currentUser ? <img className="profilePic" src={currentUser.photoURL} alt=""/> : ""}
+            {currentUser ? <h1>{currentUser.displayName}</h1> : ""}
         </div>
         <div className="container p-4 my-4 content-box">
             <h4>Bio</h4>

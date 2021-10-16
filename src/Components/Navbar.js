@@ -28,7 +28,7 @@ function Navbar() {
           <ul>
             <li className="icon"><Link to="/browse"><i className="fas fa-search"></i></Link></li>
             <li className="icon"><Link to="/books"><i className="fas fa-book"></i></Link></li>
-            <li className="icon"><Link to="/"><img src={currentUser.photoURL} alt=""/></Link></li>
+            {currentUser ? <li className="icon"><Link to="/"><img src={currentUser.photoURL} alt=""/></Link></li> : ""}
             <Button variant="link" onClick={handleLogout}>Log out</Button>
           </ul>
         </nav>
