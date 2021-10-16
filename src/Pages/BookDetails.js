@@ -49,7 +49,7 @@ const BookDetails = (props) => {
                     <option value={0} >None</option>
                 </select>
             </div>
-            <div className='container m-2 p-3 w-50' style={{border: '1px solid #fff', color: '#0dcaf0'}}>
+            <div className='container m-2 p-3 w-50 content-box'>
                 {book.description}
             </div>
         </div>
