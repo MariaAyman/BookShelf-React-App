@@ -15,8 +15,8 @@ const NotFound = () => {
                     <p>The Page you are looking for doesn't exist or an error occured.</p>
                     <p>404 Error</p>
                     <div className="d-flex justify-content-evenly align-items-center">
-                        <button className="btn btn-outline-info" type="button" id="button-addon2" onClick={() => history.goBack()}>Go Back</button>
-                        <button className="btn btn-outline-info" type="button" id="button-addon2"><Link to="/" style={{textDecoration: 'none', color: '#0dcaf0'}}>Home</Link></button>
+                        <button className="btn btn-outline-info form-button" type="button" id="button-addon2" onClick={() => history.goBack()}>Go Back</button>
+                        <Link to="/" style={{textDecoration: 'none'}}><button className="btn btn-outline-info form-button" type="button" id="button-addon2">Home</button></Link>
                     </div>
                 </div>
             </div>

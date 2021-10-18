@@ -1,7 +1,7 @@
 import Header from '../Components/Header';
 import NotFound from '../Pages/NotFound';
 
-import {useHistory} from 'react-router-dom';
+import {useHistory, Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import actions from '../redux/Actions/actions';
 
@@ -38,7 +38,7 @@ const BookDetails = (props) => {
             {/* <div className='overlay'></div> */}
             <img src={book.cover} alt="book cover" className="w-25 m-2 " />
             <h1 className="m-2">{book.title}</h1>
-            {book.series && <p className="m-2">{book.series}</p>}
+            {book.series && <Link to={`/series/${book.series.toLowerCase().split(" ").slice(0,-1).join("-")}`}><p className="m-2">{book.series}</p></Link>}
             <h2 className="m-2">{book.author}</h2>
             <p className="m-2">{book.rate}</p>
             <div className="my-3" style={{cursor: 'pointer'}}>

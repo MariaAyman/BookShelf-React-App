@@ -4,6 +4,7 @@ import Profile from './Pages/Profile';
 import BookDetails from "./Pages/BookDetails";
 import NotFound from './Pages/NotFound';
 import UpdateProfile from './Pages/UpdateProfile'
+import SeriesList from "./Pages/SeriesList"
 
 import { Route, Switch } from "react-router-dom";
 import {connect} from 'react-redux';
@@ -42,6 +43,7 @@ function App(props) {
         <Route path="/books" render={(props) => <Books {...props} books={books} />} />
         <Route path="/browse" render={(props) => <Browse {...props} books={books} />} />
         <Route path="/book/:id" render={(props) => <BookDetails {...props} books={books} />} />
+        <Route path='/series/:name' render={(props) => <SeriesList {...props} books={books} />} />
         <Route component={NotFound} />
       </Switch>
     </AuthProvider>
