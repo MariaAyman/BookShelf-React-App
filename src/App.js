@@ -3,6 +3,7 @@ import Browse from './Pages/Browse';
 import Profile from './Pages/Profile';
 import BookDetails from "./Pages/BookDetails";
 import NotFound from './Pages/NotFound';
+import UpdateProfile from './Pages/UpdateProfile'
 
 import { Route, Switch } from "react-router-dom";
 import {connect} from 'react-redux';
@@ -37,6 +38,7 @@ function App(props) {
         <Route path='/signup' component={SignUp} />
         <Route path='/login' component={Login} />
         <Route path='/forgot-password' component={ForgotPassword} />
+        <PrivateRoute path="/update-profile" component={UpdateProfile} />
         <Route path="/books" render={(props) => <Books {...props} books={books} />} />
         <Route path="/browse" render={(props) => <Browse {...props} books={books} />} />
         <Route path="/book/:id" render={(props) => <BookDetails {...props} books={books} />} />

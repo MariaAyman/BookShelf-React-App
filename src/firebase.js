@@ -9,6 +9,8 @@ import {
     updateProfile
 } from 'firebase/auth';
 
+import { getStorage } from 'firebase/storage'
+
 const app = initializeApp({
     // apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
     // authDomain: process.env.REACT_APP_AUTHDOMAIN,
@@ -25,6 +27,7 @@ const app = initializeApp({
 })
 
 export const auth = getAuth();
+export const storage = getStorage();
 export const createUser = createUserWithEmailAndPassword;
 export const signInUser = signInWithEmailAndPassword;
 export const resetPassword = sendPasswordResetEmail;
