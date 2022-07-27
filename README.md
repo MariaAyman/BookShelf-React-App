@@ -1,5 +1,7 @@
 # Bookshelf - React App
 
+Link: https://iread-bookshelf-app.netlify.app/
+
 A Bookshelf App where a user can sort his favourite books into 3 shelfs:
 - Want to read
 - Read
