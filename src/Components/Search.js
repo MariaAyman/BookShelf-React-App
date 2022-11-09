@@ -46,9 +46,9 @@ const  Search = (props) => {
               <div className="card flex-row search-result">
                 <img className="card-img-left example-card-img-responsive" src={m.cover} alt="..." style={{width: '90px', height: '150px'}} />
                 <div className="card-body">
-                  <h4 className="card-title h5 h4-sm" style={{color: '#02333c'}}>{m.title}</h4>
-                  <p className="card-text" style={{color: '#02333c'}}>{m.series}</p>
-                  <p className="card-text" style={{color: '#02333c'}}>{m.author}</p>
+                  <h4 className="card-title h5 h4-sm">{m.title}</h4>
+                  <p className="card-text">{m.series}</p>
+                  <p className="card-text">{m.author}</p>
                 </div>
               </div>
             </li>  
